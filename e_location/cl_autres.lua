@@ -18,21 +18,21 @@ local location = {
          
             if btn.name == "Twizy" then   
                 TriggerServerEvent('buyauto')
-                Car("twizy")
+                spawncar("twizy")
                 ESX.ShowAdvancedNotification("Location", "Votre ~b~véhicule ~w~à été livré avec ~g~succés ~w~!", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Bonne route !", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Va a l'arrière boutique !", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "tu retrouvera ton véhicule", "", "CHAR_CARSITE", 1)
             elseif btn.name == "Scooter" then
                 TriggerServerEvent('buyscoot')
-                Car("faggio")
+                spawncar("faggio")
                 ESX.ShowAdvancedNotification("Location", "Votre ~b~moto ~w~à été livré avec ~g~succés ~w~!", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Bonne route !", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Va a l'arrière boutique !", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "tu retrouvera ton véhicule", "", "CHAR_CARSITE", 1)
             elseif btn.name == "BMX" then 
                 TriggerServerEvent('buybmx')
-                Car("bmx")
+                spawncar("bmx")
                 ESX.ShowAdvancedNotification("Location", "Votre ~b~vélo ~w~à été livré avec ~g~succés ~w~!", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Bonne route !", "", "CHAR_CARSITE", 1)
                 ESX.ShowAdvancedNotification("Location", "Va a l'arrière boutique !", "", "CHAR_CARSITE", 1) 
@@ -54,7 +54,7 @@ local location = {
     }
 } 
 
-function spawnCar(car)
+function spawncar(car)
     local car = GetHashKey(car)
     RequestModel(car)
     while not HasModelLoaded(car) do
